@@ -24,11 +24,20 @@ export default {
 
 <style lang="scss">
 @import './style/mixin.scss';
+@import './style/variabili.scss';
 
 *{
   @include reset($tipologia: 'border-box')
 //   margin: 0;
 //   padding: 0;
 //   box-sizing: border-box;
+}
+
+li{        
+  list-style-type: none;
+
+  a{
+    text-decoration: none;
+  }
 }
 </style>

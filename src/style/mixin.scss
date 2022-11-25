@@ -1,5 +1,13 @@
 @mixin reset ( $tipologia: 'border-box' ){
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
+    @if $tipologia == 'border-box'{
+        box-sizing: border-box;
+    } @else if $tipologia == 'content-box'{
+        box-sizing: content-box;
+    } 
+
 }
+
+

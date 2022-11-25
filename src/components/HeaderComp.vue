@@ -5,7 +5,7 @@
             <li>
                 <a href="#">CHARACTERS</a></li>
             <li>
-                <a class="active-a" href="#">COMICS</a></li>
+                <a href="#">COMICS</a></li>
             <li>
                 <a href="#">MOVIES</a></li>
             <li>
@@ -33,6 +33,8 @@ export default {
 </script>
   
 <style scoped lang="scss">
+@import '../style/variabili.scss';
+
 header{
     display: flex;
     justify-content: space-between;
@@ -47,7 +49,6 @@ ul{
 
     
     li{
-        list-style-type: none;
         margin: 0 15px;
         font-size: 0.8rem;
         display: flex;
@@ -57,17 +58,16 @@ ul{
 
         a{
             color: #060606;
-            text-decoration: none;
             align-self: center;
             padding: 60px 0;
+            border-bottom: 3px solid $text-light;
+
+            &:hover{
+                color: $borders;
+                border-bottom: 3px solid $borders;
+            }
         }
     }
-
-    .active-a{
-        color: #0282f9;
-        border-bottom: 3px solid #0282f9;
-    }
-
 }
 
 </style>
